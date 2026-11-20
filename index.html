@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Dream Park — L1LC03CP (v1.0.9) | Ulipsu</title>
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/shell.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body>
+  <div class="ulipsu-app" id="ulipsu-shell">
+    <header class="ulipsu-topbar">
+      <div class="ulipsu-hdr-left">
+        <h1 class="ulipsu-hdr-title" id="hdr-title">Dream Park</h1>
+        <span class="ulipsu-hdr-subtitle" id="hdr-subtitle">Ephemeral session: resets on window close · L1LC03CP</span>
+      </div>
+
+      <div class="ulipsu-hdr-center">
+        <div class="ulipsu-hdr-step-row">
+          <span class="ulipsu-hdr-step-name" id="hdr-step-name">1. Pick 4 Features & Name</span>
+          <span class="ulipsu-hdr-step-meta" id="hdr-step-meta">CP_01–02 · Step 1/4</span>
+        </div>
+        <div id="ulipsu-stepper-mount"></div>
+      </div>
+
+      <div class="ulipsu-hdr-right">
+        <div class="ulipsu-icon-actions" role="group" aria-label="Studio Controls">
+          <button type="button" class="ulipsu-icon-btn" id="btn-scope" title="Scope & Improvisation Notes">
+            <span class="ulipsu-icon-glyph">ⓘ</span>
+            <span class="ulipsu-icon-lbl">Scope</span>
+          </button>
+          <button type="button" class="ulipsu-icon-btn" id="btn-reset" title="Reset to Step 1">
+            <span class="ulipsu-icon-glyph">↺</span>
+            <span class="ulipsu-icon-lbl">Reset</span>
+          </button>
+          <button type="button" class="ulipsu-icon-btn" id="btn-fullscreen" title="Toggle Fullscreen">
+            <span class="ulipsu-icon-glyph">⛶</span>
+            <span class="ulipsu-icon-lbl">Full</span>
+          </button>
+        </div>
+
+        <div class="ulipsu-logo-static" aria-label="Ulipsu — Learn What You Wish To">
+          <img id="ulipsu-logo-img" src="assets/img/ulipsu-logo.svg" alt="Ulipsu" draggable="false" />
+          <span class="ulipsu-logo-tagline">LEARN WHAT YOU WISH TO</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="ulipsu-stage" id="app-stage"></main>
+
+    <footer class="ulipsu-footer">
+      <div class="ulipsu-footer-inner">
+        <button type="button" class="ulipsu-btn ulipsu-btn-secondary" id="btn-prev" disabled>← Previous Step</button>
+        <span id="footer-status" style="font-size:0.84rem;color:#B45309;font-weight:700;"></span>
+        <button type="button" class="ulipsu-btn ulipsu-btn-primary" id="btn-next" disabled>Next Step →</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/logo-data.js"></script>
+  <script src="assets/js/ulipsu-bridge.js"></script>
+  <script src="assets/js/lms-adapter.js"></script>
+  <script src="assets/js/pdf.js"></script>
+  <script src="assets/js/kit.js"></script>
+  <script src="assets/js/content-data.js"></script>
+  <script src="assets/js/project.js"></script>
+  <script src="assets/js/runtime.js"></script>
+</body>
+</html>

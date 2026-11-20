@@ -1,0 +1,558 @@
+/* Module-Specific Theme: L1LC03CP — Dream Park v1.0.9 Student Visual Studio */
+:root {
+  --bg-canvas: #F3F8F5;
+  --surface-elevated: #FFFFFF;
+  --brand-primary: #059669;
+  --brand-secondary: #F59E0B;
+  --brand-soft: #ECFDF5;
+  --text-primary: #0F172A;
+  --text-muted: #475569;
+  --border-subtle: #D1FAE5;
+}
+
+/* Hero Banner */
+.dp-hero-banner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(125deg, #064E3B 0%, #047857 48%, #059669 80%, #0D9488 100%);
+  color: #FFFFFF;
+  border-radius: 20px;
+  padding: 1.3rem 1.65rem;
+  margin-bottom: 1.35rem;
+  display: grid;
+  grid-template-columns: 1.38fr 0.62fr;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 14px 32px rgba(6, 78, 59, 0.22);
+}
+
+.dp-hero-banner::before {
+  content: "";
+  position: absolute;
+  top: -35%;
+  right: -8%;
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.28) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.dp-hero-banner h1 {
+  margin: 0.3rem 0 0.35rem;
+  font-size: 1.42rem;
+  line-height: 1.24;
+  letter-spacing: -0.01em;
+}
+
+.dp-hero-banner p {
+  margin: 0;
+  color: #D1FAE5;
+  font-size: 0.92rem;
+  max-width: 720px;
+}
+
+.dp-hero-art {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.dp-ost-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(253, 224, 71, 0.45);
+  color: #FEF08A;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+}
+
+.dp-grid-2 {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+/* 8-Feature Selection Grid */
+.dp-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0.75rem 0 1.2rem;
+}
+
+.dp-feature-card {
+  position: relative;
+  border: 2px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 0.75rem 0.85rem;
+  background: #FFFFFF;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.dp-feature-card:hover {
+  border-color: #34D399;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(5, 150, 105, 0.12);
+}
+
+.dp-feature-card.is-selected {
+  border-color: #059669;
+  background: linear-gradient(135deg, #ECFDF5 0%, #FFFFFF 100%);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.18);
+}
+
+.dp-feature-card.is-selected::after {
+  content: "✓ Picked";
+  position: absolute;
+  top: 0.45rem;
+  right: 0.55rem;
+  background: #059669;
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.14rem 0.46rem;
+  border-radius: 999px;
+}
+
+.dp-feature-thumb {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Form Fields & Validation States */
+.dp-field {
+  margin-bottom: 1rem;
+}
+
+.dp-field-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.dp-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.dp-field small {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin-bottom: 0.32rem;
+}
+
+.dp-input, .dp-textarea, .dp-select {
+  width: 100%;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 11px;
+  padding: 0.6rem 0.82rem;
+  font-family: inherit;
+  font-size: 0.91rem;
+  color: var(--text-primary);
+  background: #FFFFFF;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.dp-input:focus, .dp-textarea:focus, .dp-select:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3.5px rgba(5, 150, 105, 0.15);
+}
+
+.dp-input.is-valid, .dp-textarea.is-valid {
+  border-color: #10B981;
+  background-color: #F0FDF4;
+}
+
+.dp-input.is-invalid, .dp-textarea.is-invalid {
+  border-color: #F59E0B;
+  background-color: #FFFBEB;
+}
+
+.dp-req-badge {
+  font-size: 0.71rem;
+  font-weight: 700;
+  padding: 0.14rem 0.52rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.dp-req-badge.is-ok {
+  background: #DCFCE7;
+  color: #166534;
+}
+
+.dp-req-badge.is-pending {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.dp-field-feedback {
+  font-size: 0.76rem;
+  margin-top: 0.28rem;
+  font-weight: 600;
+}
+
+.dp-field-feedback.is-ok {
+  color: #059669;
+}
+
+.dp-field-feedback.is-pending {
+  color: #B45309;
+}
+
+.dp-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  margin-top: 0.4rem;
+}
+
+.dp-chip {
+  appearance: none;
+  border: 1px solid #A7F3D0;
+  background: #ECFDF5;
+  color: #065F46;
+  border-radius: 999px;
+  padding: 0.24rem 0.65rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.14s ease, background 0.14s ease, color 0.14s ease;
+}
+
+.dp-chip:hover {
+  background: #059669;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Drag-and-Drop Park Builder Canvas */
+.dp-dock {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0.65rem 0 1.1rem;
+}
+
+.dp-drag-item {
+  border: 2px dashed #10B981;
+  background: #ECFDF5;
+  border-radius: 12px;
+  padding: 0.55rem 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.dp-drag-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(5, 150, 105, 0.15);
+}
+
+.dp-drag-item.is-selected-dock {
+  border-style: solid;
+  border-color: #4338CA;
+  background: #EEF2FF;
+}
+
+.dp-drag-item.is-placed {
+  border-style: solid;
+  border-color: #CBD5E1;
+  background: #F8FAFC;
+  opacity: 0.78;
+}
+
+.dp-park-board {
+  position: relative;
+  border: 5px solid #065F46;
+  border-radius: 18px;
+  padding: 1rem;
+  background: radial-gradient(circle at 50% 50%, #DCFCE7 0%, #BBF7D0 65%, #86EFAC 100%);
+  box-shadow: inset 0 2px 10px rgba(6, 78, 59, 0.15), 0 12px 26px rgba(15, 23, 42, 0.1);
+}
+
+.dp-park-board[data-ground="blossom"] {
+  border-color: #9D174D;
+  background: radial-gradient(circle at 50% 50%, #FCE7F3 0%, #DCFCE7 60%, #A7F3D0 100%);
+}
+
+.dp-park-board[data-ground="riverside"] {
+  border-color: #0369A1;
+  background: radial-gradient(circle at 50% 50%, #E0F2FE 0%, #D1FAE5 62%, #6EE7B7 100%);
+}
+
+.dp-park-sign {
+  background: linear-gradient(135deg, #78350F 0%, #92400E 100%);
+  color: #FEF3C7;
+  border: 3px solid #F59E0B;
+  border-radius: 12px;
+  padding: 0.45rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 4px 10px rgba(120, 53, 15, 0.25);
+}
+
+.dp-park-zones {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.dp-drop-zone {
+  min-height: 158px;
+  border: 2.5px dashed rgba(6, 95, 70, 0.45);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(4px);
+  padding: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
+}
+
+.dp-drop-zone:hover, .dp-drop-zone.is-dragover {
+  border-color: #4338CA;
+  background: rgba(238, 242, 255, 0.94);
+  transform: scale(1.015);
+  box-shadow: 0 8px 18px rgba(67, 56, 202, 0.16);
+}
+
+.dp-drop-zone.has-feature {
+  border-style: solid;
+  border-color: #059669;
+  background: rgba(255, 255, 255, 0.95);
+  cursor: grab;
+}
+
+.dp-zone-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #047857;
+  background: #D1FAE5;
+  padding: 0.14rem 0.5rem;
+  border-radius: 999px;
+  margin-bottom: 0.35rem;
+}
+
+.dp-park-gate {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #064E3B;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+}
+
+/* Per-Feature Reason Cards in Step 3 */
+.dp-reason-card {
+  border: 1.5px solid #CBD5E1;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.95rem;
+  background: #FFFFFF;
+}
+
+.dp-reason-card.is-valid {
+  border-color: #10B981;
+  background: linear-gradient(180deg, #F0FDF4 0%, #FFFFFF 100%);
+}
+
+.dp-reason-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  margin-bottom: 0.45rem;
+}
+
+/* Live Document & Park Preview Panel */
+.dp-preview-wrap {
+  position: sticky;
+  top: 5.2rem;
+}
+
+.dp-doc-sheet {
+  background: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  border-radius: 14px;
+  padding: 1.15rem;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.dp-doc-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: #1E1B4B;
+  border-bottom: 2px solid #A3E635;
+  padding-bottom: 0.4rem;
+}
+
+.dp-doc-para {
+  font-size: 0.85rem;
+  color: #1E293B;
+  margin: 0 0 0.6rem;
+  line-height: 1.52;
+}
+
+/* 4-Check Readiness Meter */
+.dp-meter-bar {
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0.6rem 0 0.75rem;
+}
+
+.dp-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #F59E0B 0%, #10B981 100%);
+  border-radius: 999px;
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dp-checks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.dp-check-card {
+  border: 1.5px solid #E2E8F0;
+  border-radius: 11px;
+  padding: 0.62rem 0.75rem;
+  background: #FFFFFF;
+}
+
+.dp-check-card.is-pass {
+  border-color: #34D399;
+  background: linear-gradient(180deg, #ECFDF5 0%, #FFFFFF 100%);
+}
+
+.dp-check-card.is-warn {
+  border-color: #FCD34D;
+  background: linear-gradient(180deg, #FFFBEB 0%, #FFFFFF 100%);
+}
+
+/* Scope & Improvisation Drawer */
+.dp-scope-panel {
+  background: #FFFFFF;
+  border: 1.5px solid #A7F3D0;
+  border-radius: 18px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 10px 26px rgba(6, 78, 59, 0.1);
+  animation: cpFadeSlideUp 0.25s ease;
+}
+
+.dp-scope-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.dp-scope-box {
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  font-size: 0.84rem;
+}
+
+.dp-scope-box.is-what { background: #ECFDF5; border: 1px solid #A7F3D0; }
+.dp-scope-box.is-loses { background: #FEF2F2; border: 1px solid #FECACA; }
+.dp-scope-box.is-deciding { background: #FFFBEB; border: 1px solid #FDE68A; }
+
+.dp-scope-box h4 {
+  margin: 0 0 0.45rem;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dp-scope-box ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.dp-scope-box li {
+  margin-bottom: 0.35rem;
+}
+
+.cp-confetti-piece {
+  position: fixed;
+  top: -16px;
+  width: 10px;
+  height: 16px;
+  border-radius: 3px;
+  z-index: 200;
+  pointer-events: none;
+  animation: cpConfettiDrop 2.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes cpConfettiDrop {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .dp-hero-banner, .dp-grid-2, .dp-feature-grid, .dp-dock, .dp-park-zones, .dp-checks-grid, .dp-scope-cols {
+    grid-template-columns: 1fr;
+  }
+  .dp-hero-art {
+    justify-content: center;
+  }
+  .dp-preview-wrap {
+    position: static;
+  }
+}
